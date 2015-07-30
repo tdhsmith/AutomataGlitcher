@@ -392,16 +392,29 @@ document.addEventListener("DOMContentLoaded", main);
 
 body {
   margin: 0;
+  font-family: Lato, Helvetica, sans-serif;
+}
+
+.settings {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 3px rgba(200,200,200,0.4);
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
 }
 
 </style>
 </head>
 <body>
   <canvas id="c" width="1024" height="1024"></canvas>
-  <br>
-  <a href="#" onclick="clickStep()">STEP</a> |
-  <a href="#" onclick="add_image()">ADD IMAGE</a> |
-  <a href="#" onclick="drawToCanvas()">draw field to canvas</a> |
-  <a href="#" onclick="sprinkle(5000,1)">clear and randomize</a>
+  <div class="settings">
+    <a href="#" onclick="clickStep()">STEP</a> |
+    <a href="#" onclick="add_image()">ADD IMAGE</a> |
+    <a href="#" onclick="drawToCanvas()">draw field to canvas</a> |
+    <a href="#" onclick="sprinkle(5000,1)">clear and randomize</a>
+  </div>
 </body>
 </html>
