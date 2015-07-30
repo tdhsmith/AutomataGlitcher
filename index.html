@@ -12,6 +12,7 @@ var clickStep = dummyFn;
 var add_image = dummyFn;
 var drawToCanvas = dummyFn;
 var sprinkle = dummyFn;
+var clear = dummyFn;
 
 var main = function () {
 //"use strict";
@@ -301,6 +302,7 @@ var main = function () {
               image_buf[image_ptr++] = 255;
           }
       }
+      ctx.fillRect(0, 0, w, h); // I don't think this is necessary
       ctx.putImageData(image_data, 0, 0);
   }
 
@@ -314,6 +316,7 @@ var main = function () {
           }
       }
   }
+  clear = function () {clear_field(0);};
 
 
   //Place a bunch of speckles on the field
@@ -413,6 +416,7 @@ body {
 <body>
   <canvas id="c" width="1024" height="1024"></canvas>
   <div class="settings">
+    <h3>Settings</h3>
     <div class="setting">
       <a href="#" onclick="clickStep()">STEP</a>
     </div>
@@ -420,10 +424,13 @@ body {
       <a href="#" onclick="add_image()">ADD IMAGE</a>
     </div>
     <div class="setting">
+      <a href="#" onclick="clear()">clear field</a>
+    </div>
+    <div class="setting">
       <a href="#" onclick="drawToCanvas()">draw field to canvas</a>
     </div>
     <div class="setting">
-      <a href="#" onclick="sprinkle(5000,1)">clear and randomize</a>
+      <a href="#" onclick="sprinkle(5000,1)">add random rectangles</a>
     </div>
   </div>
 </body>
