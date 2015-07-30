@@ -1,0 +1,23 @@
+{
+  "name": "Automata Glitcher",
+  "version": "0.0.2",
+  "homepage": "https://github.com/tdhsmith/AutomataGlitcher",
+  "authors": [
+    "tdhsmith <contact@tdhsmith.com>"
+  ],
+  "description": "A webapp to explore glitch-aesthetic image manipulations using cellular automata",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "out",
+    "images"
+  ],
+  "dependencies": {
+    "numericjs": "~1.2.6"
+  }
+}
